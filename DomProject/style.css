@@ -1,0 +1,14 @@
+*{
+    background-color: black;
+    color: white;
+    padding: 1px;
+}
+
+#incBtn,#decBtn{
+    background-color: white;
+    color: black;
+}
+#resetBtn{
+background-color: red;
+color: black;
+}
