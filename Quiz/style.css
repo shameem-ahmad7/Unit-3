@@ -1,0 +1,162 @@
+/* Set the body and html to full height and width with custom font */
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 1rem 0rem;
+  padding: 0;
+  font-family: "Inter", sans-serif; /* Custom font */
+  background-color: #f0f0f8;  /* Background color for the page */
+  display: flex;
+  justify-content: center;
+  align-items: center;  /* Center content vertically and horizontally */
+}
+
+/* Define a grid layout for the quiz sections */
+#quiz-container {
+  display: grid;  /* Grid layout */
+  width: 100%;
+  height: 100%;
+  grid-template-columns: repeat(2, 1fr);  /* Two equal-width columns */
+  grid-template-rows: repeat(2, 1fr);  /* Two equal-height rows */
+  gap: 20px;  /* Space between grid items */
+  padding: 1rem;
+}
+
+/* Styling for each quiz section */
+.section {
+  display: flex;  /* Flexbox layout */
+  justify-content: center;
+  align-items: center;  /* Center content */
+  padding: 30px;
+  border-radius: 15px;  /* Rounded corners */
+  background-color: #ffffff;  /* White background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Light shadow */
+  cursor: pointer;  /* Pointer cursor on hover */
+  transition: transform 0.3s ease;  /* Smooth hover transition */
+  font-size: 24px;
+  font-weight: 600;
+  color: #333333;
+}
+
+/* Add hover effect for quiz sections */
+.section:hover {
+  transform: translateY(-5px);  /* Slight lift effect on hover */
+}
+
+/* Background colors for different quiz sections */
+.section[data-section="0"] {
+  background-color: #ffde59;  /* General Knowledge section (yellow) */
+}
+.section[data-section="1"] {
+  background-color: #ff928b;  /* Science section (red) */
+}
+.section[data-section="2"] {
+  background-color: #8bf6ff;  /* Mathematics section (blue) */
+}
+.section[data-section="3"] {
+  background-color: #baffc9;  /* Indian History section (green) */
+}
+
+/* Hidden initially, shown when a quiz starts */
+#question-container {
+  display: none;
+  margin-top: 20px;
+}
+
+/* Score display styling */
+#score {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+/* Question text styling */
+#question {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Styling for answer options */
+#options div {
+  padding: 10px;
+  margin: 5px;
+  background-color: #ffffff;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* Hover effect for options */
+#options div:hover {
+  background-color: #eef4ff;
+}
+
+/* Styling for the "Next" button */
+#next-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Hover effect for the "Next" button */
+#next-button:hover {
+  background-color: #0056b3;
+}
+
+/* Styling for the selected answer */
+.selected {
+  background-color: #d1e0ff !important;
+}
+
+/* Feedback message styling */
+#feedback {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 5px 0px !important;
+  margin-top: 10px !important;
+  background-color: transparent !important;
+  border: 0px solid #fff !important;
+  border-radius: 5px;
+  cursor: default !important;
+}
+
+/* Feedback hover effect */
+#feedback:hover {
+  background-color: transparent !important;
+}
+
+/* Input field styling for text or numeric answers */
+input[type="text"],
+input[type="number"] {
+  width: 80%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+}
+
+/* Styling for the submit answer button */
+button.submit-answer {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* Hover effect for the submit answer button */
+button.submit-answer:hover {
+  background-color: #218838;
+}
