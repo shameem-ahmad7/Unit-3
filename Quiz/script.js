@@ -73,7 +73,7 @@ function startQuiz(index) {
         function checkAnswer(userAnswer, correctAnswer) {
             const FeedbackELement = document.createElement('div');  // Create a div to display feedback
             FeedbackELement.id = 'feedback';  // Set the feedback div ID
-            if (userAnswer === correctAnswer || userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
+            if (userAnswer === correctAnswer || userAnswer.toLowerCase().trim() === correctAnswer.toLowerCase().trim()) {
                 score++;  // Increment score if the answer is correct
                 document.getElementById('score').textContent = "Score: " + score;  // Update the displayed score
                 FeedbackELement.textContent = "Correct Answer";  // Display correct answer feedback
